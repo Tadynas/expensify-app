@@ -18,7 +18,7 @@ store.dispatch(setTextFilter('Gas'));
 
 setTimeout(() => {
   store.dispatch(setTextFilter('bill'))
-}, 3000);
+}, 1000);
 
 const state = store.getState();
 const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
