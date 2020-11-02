@@ -4,7 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "serve": "live-server public/",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
@@ -23,10 +22,9 @@
     "babel-loader": "7",
     "css-loader": "^4.2.1",
     "express": "^4.17.1",
-    "jest": "^26.6.1",
-    "live-server": "^1.2.1",
     "mini-css-extract-plugin": "^1.2.1",
     "moment": "^2.29.0",
+    "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
     "react-addons-shallow-compare": "^15.6.2",
@@ -36,14 +34,14 @@
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
+    "sass-loader": "^9.0.3",
     "style-loader": "^1.2.1",
     "uuid": "^8.3.0",
     "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
-    "node-sass": "^4.14.1",
-    "sass-loader": "^9.0.3"
+    "jest": "^26.6.1",
+    "webpack-dev-server": "^3.11.0"
   }
 }
