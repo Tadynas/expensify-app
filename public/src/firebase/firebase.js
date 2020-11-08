@@ -22,12 +22,20 @@ database.ref().set({
     city: 'Vilnius',
     country: 'Lithuania'
   },
+}).then(() => {
+  console.log('1. Data is saved');
+}).catch((error) => {
+  console.log('1. This failed', error);
 });
 
-database.ref('age').set(69);
-database.ref('location/country').set('Antarktida')
+// database.ref('age').set(69);
+// database.ref('location/country').set('Antarktida')
 
 database.ref('attributes').set({
   height: 165,
   weight: 65
+}).then(() => {
+  console.log('2. Data is saved');
+}).catch((error) => {
+  console.log('2. This failed', error);
 });
