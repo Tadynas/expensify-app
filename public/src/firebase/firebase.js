@@ -28,14 +28,11 @@ database.ref().set({
   console.log('1. This failed', error);
 });
 
-// database.ref('age').set(69);
-// database.ref('location/country').set('Antarktida')
 
-database.ref('attributes').set({
-  height: 165,
-  weight: 65
-}).then(() => {
-  console.log('2. Data is saved');
-}).catch((error) => {
-  console.log('2. This failed', error);
-});
+// database.ref('isSingle').set(null);
+
+// database.ref().remove().then(() => {
+//   console.log('Data was removed');
+// }).catch((error) => {
+//   console.log('Data was not removed: ', error);
+// });
