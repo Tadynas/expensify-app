@@ -12,6 +12,22 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-firebase.database().ref().set({
-  name: 'Gret'
+const database = firebase.database();
+
+database.ref().set({
+  name: 'Gret',
+  age: 21,
+  isSingle: false,
+  location: {
+    city: 'Vilnius',
+    country: 'Lithuania'
+  },
+});
+
+database.ref('age').set(69);
+database.ref('location/country').set('Antarktida')
+
+database.ref('attributes').set({
+  height: 165,
+  weight: 65
 });
