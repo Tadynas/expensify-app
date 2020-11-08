@@ -14,6 +14,74 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
+
+// // Child removed
+// database.ref('expenses')
+//   .on('child_removed', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val());
+// });
+
+// // Child changed
+// database.ref('expenses')
+//   .on('child_changed', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val());
+// });
+
+// // Child added
+// database.ref('expenses')
+//   .on('child_added', (snapshot) => {
+//     console.log(snapshot.key, snapshot.val());
+// });
+
+// Add expenses to array
+// database.ref('expenses')
+//   .on('value', (snapshot) => {
+//     const expenses = [];
+//     snapshot.forEach((item) => {
+//       expenses.push({
+//         id: item.key,
+//         ...item.val()
+//       });
+//     });
+
+//     console.log(expenses);
+//   });
+
+
+// database.ref('expenses').push({
+//   description: 'Food',
+//   note: '',
+//   amount: 195600,
+//   createdAt: 100000
+// });
+
+// database.ref('notes/-MLcXU1NEEJnzvyAWb7U').remove();
+
+// const firebaseNotes = {
+//   notes: {
+//     12: {
+//       title: 'First',
+//       body: 'If you leave'
+//     },
+//     13: {
+//       title: 'Second',
+//       body: 'I report'      
+//     }
+//   }
+// };
+
+// const notes = [{
+//   id: '12',
+//   title: 'First',
+//   body: 'If you leave'
+// }, {
+//   id: '13',
+//   title: 'Second',
+//   body: 'I report'
+// }]
+
+// database.ref('notes').set(notes);
+
 // database.ref('location/city')
 //   .once('value')
 //   .then((snapshot) => {
@@ -24,11 +92,10 @@ const database = firebase.database();
 //     console.log('Error fetching data', error);
 // });
 
-database.ref().on('value', (snapshot) => {
-  const { name, job: { title, company }} = snapshot.val();
-  console.log(`${name} is a ${title} at ${company}.`);
-});
-
+// database.ref().on('value', (snapshot) => {
+//   const { name, job: { title, company }} = snapshot.val();
+//   console.log(`${name} is a ${title} at ${company}.`);
+// });
 
 // const onValueChange = database.ref().on('value', (snapshot) => {
 //   console.log(snapshot.val());
