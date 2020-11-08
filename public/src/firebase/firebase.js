@@ -17,7 +17,11 @@ const database = firebase.database();
 database.ref().set({
   name: 'Gret',
   age: 21,
-  isSingle: false,
+  stressLevel: 99,
+  job: {
+    title: 'Baker',
+    company: 'Gwet Baking Company'
+  },
   location: {
     city: 'Vilnius',
     country: 'Lithuania'
@@ -28,6 +32,15 @@ database.ref().set({
   console.log('1. This failed', error);
 });
 
+database.ref().update({
+  stressLevel: 101,
+  'job/company': 'Greta Reta Baking Company',
+  'location/country': 'Amsterdam'
+}).then(() => {
+  console.log('Data is updated');
+}).catch((error) => {
+  console.log('Update failed', error);
+});
 
 // database.ref('isSingle').set(null);
 
