@@ -8,8 +8,14 @@ const promise = new Promise((resolve, reject) => {
   }, 1500)
 });
 
-promise.then((data) => {
-  console.log(data);
-}).catch((error) => {
-  console.log('error: ', error);
+promise
+  .then((data) => {
+    console.log(data);
+    return 'some data';
+  })
+  .then((data) => {
+    console.log('second ', data);
+  })
+  .catch((error) => {
+    console.log('error: ', error);
 });
