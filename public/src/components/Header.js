@@ -17,3 +17,9 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(undefined, mapDispatchToProps)(Header);
+
+const db = {
+  expenses: {
+    
+  }
+}
