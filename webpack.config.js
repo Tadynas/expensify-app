@@ -46,8 +46,11 @@ module.exports = (env) => {
             options: {
               sourceMap: true
             }
-          }
+          },
         ]
+      }, {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader'
       }]
     },
     plugins: [
