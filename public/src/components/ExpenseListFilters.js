@@ -22,12 +22,12 @@ class ExpenseListFilters extends React.Component {
       <div className="content-container">
         <div className="input-group">
           <div className="input-group__item">
-            <input type="text" value={this.props.filters.text} onChange={(e) => {
+            <input className="form-item" type="text" placeholder="Search expenses..." value={this.props.filters.text} onChange={(e) => {
               this.props.dispatch(setTextFilter(e.target.value));
             }}/>
           </div>
           <div className="input-group__item">
-            <select value={this.props.filters.sortBy} onChange={(e) => {
+            <select className="form-item" value={this.props.filters.sortBy} onChange={(e) => {
               if (e.target.value == "date") {
                 this.props.dispatch(sortByDate());
               } else if (e.target.value == "amount") {
